@@ -4,7 +4,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    context: path.resolve(process.cwd(), "src/app"),    
+    context: path.resolve(process.cwd(), "src"),    
     entry: entry,
     watch: true,
     output: {
@@ -15,12 +15,9 @@ module.exports = {
         new ExtractTextPlugin("css/[name].css"),
         new HtmlWebpackPlugin({
             title: 'sale',
-            template: path.resolve(
-                process.cwd(),
-                'src/base/webpack.template.html'
-            ),
-            filename: 'sale.html',
+            template: 'base/webpack.template.html',
             chunks: ['sale'],
+            filename: 'sale.html',
         }),
     ],
     module: {
@@ -59,9 +56,4 @@ module.exports = {
             },
         ]
     },
-
-
-
-
-
 }
