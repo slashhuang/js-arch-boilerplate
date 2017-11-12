@@ -1,5 +1,8 @@
 import './sale.less';
-let a = '1';
-console.log(a);
+import React from 'react';
+import ReactDom from 'react-dom';
 const node = document.getElementById('root');
-node.innerHTML = 'hello , world';
+ReactDom.render("hello world 5", node);
+
+
+// [webpack template]  ES5/ES6 ==> ES5

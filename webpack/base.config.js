@@ -6,12 +6,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     context: path.resolve(process.cwd(), "src"),    
     entry: entry,
-    watch: true,
-    devServer: {
-        contentBase: path.join(process.cwd(), "sample"),
-        compress: true,
-        port: 9000
-    },
     output: {
         publicPath: '/dist',
         path: path.resolve(process.cwd(), "dist"),
@@ -22,7 +16,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'sale',
             template: 'base/webpack.template.html',
-            chunks: ['sale'],
+            chunks: ['sale', "list"],
             filename: 'sale.html',
         }),
     ],
