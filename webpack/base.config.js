@@ -14,16 +14,17 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin("css/[name].css"),
         new HtmlWebpackPlugin({
-            title: 'sale',
             template: 'base/webpack.template.html',
-            chunks: ['sale', "list"],
-            filename: 'sale.html',
+            inject: true
         }),
     ],
+    resolve: {
+        extensions: [".js", ".jsx", ".json"],  
+    },
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 loader: 'babel-loader',
             }, 
             {
