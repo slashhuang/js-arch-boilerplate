@@ -1,4 +1,4 @@
 module.exports = {
-    sale: "./app/sale.js",
+    sale: "./app/sale.tsx",
     list: "./app/list.js",
 };

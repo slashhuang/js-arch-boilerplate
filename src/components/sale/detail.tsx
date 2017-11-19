@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import './detail.less';
 export class SaleDetail extends React.Component {
     render() {
