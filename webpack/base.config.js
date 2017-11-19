@@ -19,17 +19,19 @@ module.exports = {
         }),
     ],
     resolve: {
-        extensions: ["tsx", "ts", ".js", ".jsx", ".json"],  
+        extensions: [".tsx", ".ts", ".js", ".jsx", ".json"],  
     },
     module: {
         rules: [
             {
                 test: /\.tsx?$/,
                 loader: 'awesome-typescript-loader',
+                exclude: /node_modules/
             }, 
             {
                 test: /\.jsx?$/,
                 loader: 'babel-loader',
+                exclude: /node_modules/
             }, 
             {
                 test: /\.scss$/,

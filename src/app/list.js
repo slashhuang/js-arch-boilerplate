@@ -1,2 +1,3 @@
-const b = "b";
-console.log(b + 'c' + 'd');
+const node = document.getElementById('root-list');
+
+node.innerHTML += 'this is from list';
