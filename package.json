@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "lint": "tslint",
+    "lint": "tslint --project '.' ",
     "dev": "webpack-dev-server --config webpack/dev.config.js ",
     "prod": "webpack --config webpack/prod.config.js --optimize-minimize"
   },
@@ -38,6 +38,7 @@
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "node-sass": "^4.6.0",
+    "pre-commit": "^1.2.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
     "ts-jest": "^21.2.3",
